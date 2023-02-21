@@ -9,7 +9,7 @@ module "nginx" {
     source = "./terraform-docker-provider"
     image_name = "nginx:latest"
     container_name = "nginx"
-    container_memory = 256m
+    container_memory = "256m"
     container_privileged = false
     container_count = 3
     starting_port = 3000
