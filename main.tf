@@ -26,3 +26,8 @@ resource "docker_container" "container_name" {
     external = var.starting_port + count.index + 1
   }
 }
+
+# define output 
+output "container_names" {
+  value = docker_container.container_name[*].name
+}

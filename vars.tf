@@ -5,7 +5,7 @@ variable "image_name" {
 }
 
 variable "container_name" {
-  description = "Define containers' names"
+  description = "Name given to created containers"
   type        = string
   default     = "nginx"
 }
@@ -29,7 +29,7 @@ variable "numberof_containers" {
 }
 
 variable "starting_port" {
-  description = "Starting port number to use for container ports"
+  description = "Starting port number used by containers"
   type        = number
   default     = 3000
 }
