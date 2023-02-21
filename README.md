@@ -10,8 +10,8 @@ module "nginx" {
     image_name = "nginx:latest"
     container_name = "nginx"
     container_memory = "256m"
-    container_privileged = false
-    container_count = 3
+    privileged = false
+    numberof_containers = 3
     starting_port = 3000
     }
 ```
@@ -22,8 +22,8 @@ module "nginx" {
 | `image_name` | Docker image name to use for the containers | `string` | "nginx:latest" | no |
 | `container_name` | Name given to created containers | `string` | "nginx" | no |
 | `container_memory` | Memory allocated to each container | `string` | 256m | no |
-| `container_privileged` | Run container in privileged mode or not | `bool` | false | no |
-| `container_count` | Number of containers to spawn | `number` | 3 | no |
+| `privileged` | Run container in privileged mode or not | `bool` | false | no |
+| `numberof_containers` | Number of containers to spawn | `number` | 3 | no |
 | `starting_port` | Starting port number used by containers | `number` | 3000 | no |
 
 ## Outputs
